@@ -12,14 +12,14 @@ function loadDataTable() {
             "datatype": "json"
         },
         "columns": [
-            { "data": "name", "width": "30%" },
-            { "data": "author", "width": "30%" },
-            { "data": "isbn", "width": "30%" },
+            { "data": "name", "width": "25%" },
+            { "data": "author", "width": "25%" },
+            { "data": "isbn", "width": "25%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                        <a href="/BookList/Edit?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:100px;'>
+                        <a href="/BookList/Upsert?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
                     Edit
                     </a>
                     &nbsp;
@@ -28,7 +28,7 @@ function loadDataTable() {
                     Delete
                     </a>
                     </div>`;
-                }, "width": "30%"
+                }, "width": "15%"
             }
         ],
         "language": {
